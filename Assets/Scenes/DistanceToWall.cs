@@ -25,7 +25,7 @@ public class DistanceToWall : MonoBehaviour
     void Update()
     {
         //Calculate the distance based on X axis
-        distance = (checkPoint.transform.position.z - transform.position.z);
+        distance = Mathf.Abs(checkPoint.transform.position.z - transform.position.z) -2.5f;
 
         //Display Distance via UI
         distanceText.text = "Distance: " + distance.ToString("F1") + " meters";
